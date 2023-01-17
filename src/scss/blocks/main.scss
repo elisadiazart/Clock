@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    color: white;
+}
+.main{
+    width: 40%;
+    display: flex;
+    margin: 1rem;
+    border: white solid 2px;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.digital-clock{
+    padding: 2rem;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hours-container{
+    display: flex;
+    margin: auto;
+    font-size: 4rem;
+    font-family: sans-serif;
+    font-weight: 800;
+    margin-bottom: .4rem;
+}
+
+.date-container{
+    margin: auto;
+    display: flex;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+
+.analogic-clock{
+    background-color: rgb(62, 62, 62);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
