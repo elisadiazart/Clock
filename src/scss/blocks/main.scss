@@ -3,7 +3,6 @@ body{
     color: white;
 }
 .main{
-    width: 40%;
     display: flex;
     margin: 1rem;
     border: white solid 2px;
@@ -38,8 +37,111 @@ body{
 
 
 .analogic-clock{
+    background-color: rgb(131, 131, 131);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.outer-clock-face{
     background-color: rgb(62, 62, 62);
     width: 160px;
     height: 160px;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: '';
+        width: 2.5px;
+        background-color: white;
+        height: 100%;
+    }
+
+    &::after{
+        content: '';
+        width: 2.5px;
+        background-color: white;
+        height: 100%;
+        transform: rotate(90deg);
+        z-index: 0;
+    }
+}
+
+.marking{
+    width: 2.5px;
+    background-color: white;
+    height: 100%;
+    position: absolute;
+}
+
+.marking-one{
+    transform: rotate(30deg);
+}
+
+.marking-two{
+    transform: rotate(60deg);
+}
+
+.marking-three{
+    transform: rotate(120deg);
+}
+
+.marking-four{
+    transform: rotate(150deg);
+}
+
+.inner-clock-face{
+    background-color: rgb(62, 62, 62);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgb(121, 129, 161);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+    }
+}
+
+.hand{
+    width: 2px;
+    position: absolute;
+    height: 40px;
+    background-color: azure;
+    bottom: 50%;
+    left: calc(50% - 2px);
+    border-radius: 60px;
+    transform-origin: bottom;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand{
+    width: 3.5px;
+}
+
+.min-hand{
+    height: 50px;
+    background-color: rgb(165, 165, 165);
+}
+
+.second-hand{
+    width: 1.5px;
+    height: 55px;
+    background-color: red;
 }
